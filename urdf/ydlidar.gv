@@ -1,0 +1,8 @@
+digraph G {
+node [shape=box];
+"base_laser" [label="base_laser"];
+"laser_frame" [label="laser_frame"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"base_laser" -> "laser_joint" [label="xyz: 0 0 0.03172 \nrpy: 0 -0 0"]
+"laser_joint" -> "laser_frame"
+}
