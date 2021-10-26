@@ -7,8 +7,8 @@ joint_state_controller:
 
 mobile_base_controller:
   type        : "diff_drive_controller/DiffDriveController"
-  left_wheel  : ['left_wheel_joint']
-  right_wheel : ['right_wheel_joint']
+  # left_wheel  : 'left_wheel_joint'
+  # right_wheel : 'right_wheel_joint'
   publish_rate: 50.0               # default: 50 
   # pid: {p: 100.0  , i: 0.0, d: 0.0}
   pose_covariance_diagonal : [0.001, 0.001, 1000000.0, 1000000.0, 1000000.0, 1000.0]
