@@ -11,10 +11,8 @@ def publish_vel():
     msg.linear.x = 0.1
     msg.linear.y = 0
     msg.linear.z = 0
-    now = rospy.Time.now()
     rate = rospy.Rate(10)
-    # Publish move command for 6 seconds
-    while rospy.Time.now() < now + rospy.Duration.from_sec(6):
+    while not rospy.is_shutdown():
         vel.publish(msg)
         rate.sleep()
     

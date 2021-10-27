@@ -6,15 +6,15 @@
         <!-- For file tag, mention the gazebo_ros empty world's launch file -->
         <!-- For the arg name, give any name of your choice to this world -->
         <!-- for the value tag, provide the path to the world file that you downloaded -->
-	<!-- <include file="$(find gazebo_ros)/launch/empty_world.launch">
+	<include file="$(find gazebo_ros)/launch/empty_world.launch">
 		<arg name="world_name" value="$(find proj_1_662)/world/competition_arena.world"/>
 		<arg name="paused" value="false"/>
 		<arg name="use_sim_time" value="true"/>
 		<arg name="gui" value="true"/>
 		<arg name="headless" value="false"/>
 		<arg name="debug" value="false"/>
-  	</include> -->
-	<include file="$(find gazebo_ros)/launch/empty_world.launch" />
+  	</include>
+	<!-- <include file="$(find gazebo_ros)/launch/empty_world.launch" /> -->
 
         <!-- Defining this param here helps you store all the urdf contents of robot+lidar into a single param name -->
         <!-- fill the command by adding in the path to your .xacro file the $ symbol below -->
@@ -31,7 +31,7 @@
 	<!-- Node for publishing base footprint -->
 	<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
         <param name="use_gui" value="False"/>
-		<param name="rate" value="10.0"/>
+		<param name="rate" value="20.0"/>
     </node>
 
 
